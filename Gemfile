@@ -71,6 +71,8 @@ group :development do
   gem "rubocop-rails"
 end
 
+gem "faraday"
+
 group :test do
   gem "rspec-rails"
   gem "capybara"
