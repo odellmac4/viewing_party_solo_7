@@ -27,3 +27,12 @@ When you run `bundle exec rspec`, you should have 26 passing tests (both feature
 - Rails 7.1.2
 
 Example wireframes to follow are found [here](https://backend.turing.edu/module3/projects/viewing_party_solo/wireframes)
+
+## Project Specs
+1. Discover Movies: Search by Title
+As a user,
+When I visit the '/users/:id/discover' path (where :id is the id of a valid user),
+I should see
+- a Button to Discover Top Rated Movies
+- a text field to enter keyword(s) to search by movie title
+- a Button to Search by Movie Title
