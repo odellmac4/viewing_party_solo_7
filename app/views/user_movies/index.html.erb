@@ -1,0 +1,10 @@
+<center>
+    <h1>Viewing Party</h1>
+    <%=button_to "Discover Page", user_discover_index_path(@user) , method: :get%>
+</center>    
+
+<%@movies.each do |movie|%>
+    <section class="movie">
+   <p class="title vote_avg"><%=link_to "#{movie[:original_title]}", user_movie_path(@user, movie) %> Vote Average: <%=movie[:vote_average]%></p>
+   </section>
+<%end%>
