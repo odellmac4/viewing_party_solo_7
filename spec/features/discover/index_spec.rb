@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'User discover page', type: :feature do
+RSpec.describe 'User discover page', type: :feature, vcr: true do
     before(:each) do
         @user = User.create!(name: "Odell", email: "odell@dreams.com")
     end

@@ -5,6 +5,6 @@
 
 <%@movies.each do |movie|%>
     <section class="movie">
-   <p class="title vote_avg"><%=link_to "#{movie[:original_title]}", user_movie_path(@user, movie) %> Vote Average: <%=movie[:vote_average]%></p>
+   <p class="title vote_avg"><%=link_to "#{movie.title}", user_movie_path(@user, movie) %> Vote Average: <%=movie.vote_avg%></p>
    </section>
 <%end%>
