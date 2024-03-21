@@ -36,3 +36,13 @@ I should see
 - a Button to Discover Top Rated Movies
 - a text field to enter keyword(s) to search by movie title
 - a Button to Search by Movie Title
+
+2. Movie Results Page
+When I visit the discover movies page ('/users/:id/discover'),
+and click on either the Discover Top Rated Movies button or fill out the movie title search and click the Search button,
+I should be taken to the movies results page (`users/:user_id/movies`) where I see: 
+
+- Title (As a Link to the Movie Details page (see story #3))
+- Vote Average of the movie
+
+I should also see a button to return to the Discover Page.

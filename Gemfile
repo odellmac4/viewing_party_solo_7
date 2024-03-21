@@ -71,9 +71,13 @@ group :development do
   gem "rubocop-rails"
 end
 
+gem "faraday"
+
 group :test do
   gem "rspec-rails"
   gem "capybara"
   gem "launchy"
   gem "simplecov"
+  gem "webmock"
+  gem "vcr"
 end
