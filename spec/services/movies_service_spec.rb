@@ -23,5 +23,14 @@ RSpec.describe MoviesService, :vcr do
             expect(searched_movies_data[:original_title]).to be_a(String)
             expect(searched_movies_data[:vote_average]).to be_a(Float)
         end
+
+        it 'returns movie by id' do
+            top_movie = MoviesService.new.top_rated_movies[:results].first
+
+            movie_by_id = MoviesService.new.movie_by_id(top_movie[:id])
+            expect(movie_by_id).to be_a Hash
+            expect(top_movie[:id]).to eq(movie_by_id[:id])
+          
+        end
     end
 end

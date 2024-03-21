@@ -1,10 +1,11 @@
 <center>
     <h1>Viewing Party</h1>
+    <h6>Movie results for: <%=@search%></h6>
     <%=button_to "Discover Page", user_discover_index_path(@user) , method: :get%>
 </center>    
 
 <%@movies.each do |movie|%>
     <section class="movie">
-   <p class="title vote_avg"><%=link_to "#{movie.title}", user_movie_path(@user, movie) %> Vote Average: <%=movie.vote_avg%></p>
+   <p class="title vote_avg"><%=link_to "#{movie.title}", user_movie_path(@user, movie.id) %> Vote Average: <%=movie.vote_avg%></p>
    </section>
 <%end%>

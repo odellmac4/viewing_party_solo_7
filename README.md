@@ -46,3 +46,21 @@ I should be taken to the movies results page (`users/:user_id/movies`) where I s
 - Vote Average of the movie
 
 I should also see a button to return to the Discover Page.
+
+3. Movie Details Page
+As a user, 
+When I visit a movie's detail page (`/users/:user_id/movies/:movie_id`) where :id is a valid user id,
+I should see
+- a button to Create a Viewing Party
+- a button to return to the Discover Page
+
+I should also see the following information about the movie:
+
+- Movie Title
+- Vote Average of the movie
+- Runtime in hours & minutes
+- Genre(s) associated to movie
+- Summary description
+- List the first 10 cast members (characters & actress/actors)
+- Count of total reviews
+- Each review's author and information
