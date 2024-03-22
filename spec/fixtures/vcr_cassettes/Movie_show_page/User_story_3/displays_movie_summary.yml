@@ -1,0 +1,130 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/500?api_key=<PROPUBLICA_API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Fri, 22 Mar 2024 06:23:58 GMT
+      Server:
+      - openresty
+      Cache-Control:
+      - public, max-age=18021
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - ea1533d7eacdf7908fcd7b88f0265abe
+      X-Memc-Age:
+      - '7542'
+      X-Memc-Expires:
+      - '18021'
+      Etag:
+      - W/"aa3343d1e8adb94f539be3784b23117d"
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 30a008d85df71a65d24879648931496c.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - LAX50-C2
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      X-Amz-Cf-Id:
+      - rBQcCFE-azsS60Bo20GY29eqWYDOWJfH8mJGD2H1lNl4a2S1Tb9cLg==
+      Age:
+      - '11168'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"adult":false,"backdrop_path":"/jqFjgNnxpXIXWuPsyfqmcLXRo9p.jpg","belongs_to_collection":null,"budget":1200000,"genres":[{"id":80,"name":"Crime"},{"id":53,"name":"Thriller"}],"homepage":"","id":500,"imdb_id":"tt0105236","original_language":"en","original_title":"Reservoir
+        Dogs","overview":"A botched robbery indicates a police informant, and the
+        pressure mounts in the aftermath at a warehouse. Crime begets violence as
+        the survivors -- veteran Mr. White, newcomer Mr. Orange, psychopathic parolee
+        Mr. Blonde, bickering weasel Mr. Pink and Nice Guy Eddie -- unravel.","popularity":49.792,"poster_path":"/xi8Iu6qyTfyZVDVy60raIOYJJmk.jpg","production_companies":[{"id":285,"logo_path":"/ebAB20KtEg4J0eFMFBGhFJsSoYc.png","name":"Live
+        Entertainment","origin_country":"US"},{"id":26198,"logo_path":null,"name":"Dog
+        Eat Dog Productions","origin_country":""}],"production_countries":[{"iso_3166_1":"US","name":"United
+        States of America"}],"release_date":"1992-09-02","revenue":2859750,"runtime":99,"spoken_languages":[{"english_name":"English","iso_639_1":"en","name":"English"}],"status":"Released","tagline":"Every
+        dog has his day.","title":"Reservoir Dogs","video":false,"vote_average":8.1,"vote_count":13729}'
+  recorded_at: Fri, 22 Mar 2024 09:30:06 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/500/reviews?api_key=<PROPUBLICA_API_KEY>&page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Fri, 22 Mar 2024 08:45:18 GMT
+      Server:
+      - openresty
+      Cache-Control:
+      - public, max-age=4719
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - 564f153c23ce02f866da2dd8417dfff7
+      X-Memc-Age:
+      - '17228'
+      X-Memc-Expires:
+      - '4719'
+      Etag:
+      - W/"93a1f86bd1baf4339d89be63582e0454"
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 bd9637c4f3589cb11bd1c97ee3334dcc.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - LAX50-C2
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      X-Amz-Cf-Id:
+      - hO5CPhiFf5SqHSX9dsH-LkuFqSVDl76xXEJ0ZSBj_qU02Eyk3xDtyA==
+      Age:
+      - '2688'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6NTAwLCJwYWdlIjoxLCJyZXN1bHRzIjpbeyJhdXRob3IiOiJ0YWxpc2VuY3J3IiwiYXV0aG9yX2RldGFpbHMiOnsibmFtZSI6IiIsInVzZXJuYW1lIjoidGFsaXNlbmNydyIsImF2YXRhcl9wYXRoIjpudWxsLCJyYXRpbmciOjEwLjB9LCJjb250ZW50IjoiVGhpcyB1bmlxdWUgdGFrZSBvbiB0aGUgaGVpc3QtZmlsbS1nb25lLXdyb25nIHdhcyBleGNlbGxlbnQtLXN0eWxpc2ggYW5kIGludGVsbGlnZW50bHkgbWFkZSwgeWV0IHZlcnkgZnVubnkgYW5kIGluZXhwZW5zaXZlLiBUYXJhbnRpbm8ncyBhY2NvbGFkZXMgZnJvbSBnaXZpbmcgQW1lcmljYW4gY2luZW1hIHRoZSByZXN1c2NpdGF0aW9uIGl0IG5lZWRlZCBtaXJyb3JzIHdoYXQgaGFzIGhhcHBlbmVkLCBhdCBsZWFzdCBzaW5jZSB0aGUgNzAncywgd2l0aCBNYXJ0aW4gU2NvcnNlc2UncyAnTWVhbiBTdHJlZXRzJywgYm90aCBpbiB0ZXJtcyBvZiBlbnRlcnRhaW5pbmcgdmlvbGVuY2UgYW5kIHVzYWdlIG9mIG11c2ljIGluIHRoZSBzY29yaW5nIG9mIGZpbG1zLiBJIGdyZWF0bHkgdGhhbmsgSGFydmV5IEtlaXRlbCBmb3IgdGFraW5nIGEgY2hhbmNlIG9uIFRhcmFudGlubyBiYWNrIHRoZW4tLUl0IHBhaWQgb2ZmIGluIHNwYWRlcy4iLCJjcmVhdGVkX2F0IjoiMjAxNi0wNS0xNFQxOTowNToyOC44NTNaIiwiaWQiOiI1NzM3NzZmOGMzYTM2ODA1YWIwMDEwNDAiLCJ1cGRhdGVkX2F0IjoiMjAyMS0wNi0yM1QxNTo1Nzo0Ny42ODhaIiwidXJsIjoiaHR0cHM6Ly93d3cudGhlbW92aWVkYi5vcmcvcmV2aWV3LzU3Mzc3NmY4YzNhMzY4MDVhYjAwMTA0MCJ9LHsiYXV0aG9yIjoiV3VjaGFrIiwiYXV0aG9yX2RldGFpbHMiOnsibmFtZSI6IiIsInVzZXJuYW1lIjoiV3VjaGFrIiwiYXZhdGFyX3BhdGgiOiIvNEtWTTFWa3FtWExPdXdqMWpqYVNkeGJ2QkRrLmpwZyIsInJhdGluZyI6NC4wfSwiY29udGVudCI6IlRoZSBjdXNzLW9yaWVudGVkIHNxdWFiYmxlcyBvZiBsb3dsaWZlIGNyb29rcyBmb3IgOTkgbWludXRlcyAoYW5kIG5vIHdvbWVuKVxyXG5cdFxyXG5SRUxFQVNFRCBJTiAxOTkyIGFuZCB3cml0dGVuL2RpcmVjdGVkIGJ5IFF1ZW50aW4gVGFyYW50aW5vLCBcIlJlc2Vydm9pciBEb2dz4oCdIGlzIGEgY3JpbWUgZHJhbWEvdGhyaWxsZXIgYWJvdXQgYSBkaWFtb25kIGhlaXN0IGdvbmUgZGlzYXN0cm91c2x5IHdyb25nIGluIExvcyBBbmdlbGVzIHdoZXJlaW4gdGhlIHN1cnZpdmluZyB0aHVncyBiaWNrZXIgYmFjay1hbmQtZm9ydGggaW4gYSB3YXJlaG91c2UgYWJvdXQgd2hpY2ggb2YgdGhlaXIgbWVtYmVycyBpcyBhIHBvbGljZSBpbmZvcm1hbnQuIFRoZSBtYWluIHRoaWV2ZXMgYXJlIHBsYXllZCBieSBIYXJ2ZXkgS2VpdGVsLCBUaW0gUm90aCwgU3RldmUgQnVzY2VtaSwgTWljaGFlbCBNYWRzZW4gYW5kIENocmlzIFBlbm4gd2hpbGUgTGF3cmVuY2UgVGllcm5leSBhcHBlYXJzIGFzIHRoZSBvbGQgc2FsdCBtYXN0ZXJtaW5kLlxyXG5cclxuVGhpcyB3YXMgVGFyYW50aW5v4oCZcyBmaXJzdCBmZWF0dXJlIGZpbG0sIGNvc3Rpbmcgb25seSAkMSwyMDAsMDAwLCBhbmQgaXQgaGFzIHF1aXJreSBnbGltbWVyaW5ncyBvZiBmdXR1cmUgZ3JlYXRuZXNzLCBhcyBzZWVuIGluIOKAnFB1bHAgRmljdGlvbuKAnSAoMTk5NCksIOKAnEphY2tpZSBCcm93buKAnSAoMTk5NyksIOKAnEtpbGwgQmlsbOKAnSAoMjAwMy8yMDA0KSwg4oCcSW5nbG91cmlvdXMgQmFzdGVyZHPigJ0gKDIwMDkpIGFuZCDigJxEamFuZ28gVW5jaGFpbmVk4oCdICgyMDEyKSwgYnV0IOKAnFJlc2Vydm9pcuKAnSBkaWRu4oCZdCB3b3JrIGZvciBtZS4gSXTigJlzIGhhbXBlcmVkIGJ5IGEgbG93LWJ1ZGdldCB2aWJlLCB3aGljaCBJIGNhbiBoYW5kbGUsIGJ1dCBub3QgdGhlIHVuaW50ZXJlc3RpbmcgbG93bGlmZSBjaGFyYWN0ZXJzLCB0aGVpciBzZWxmLW1hZGUgY29udW5kcnVtLCB0aGVpciBpbnRlcm1pbmFibHkgZHVsbCBkaWFsb2d1ZSBhbmQgdGhlIG9uZS1kaW1lbnNpb25hbCBzZXR0aW5nIHdoZXJlIGFib3V0IDgwJSBvZiB0aGUgc3RvcnkgdGFrZXMgcGxhY2UgaW4gYW4gb2xkIHdhcmVob3VzZSwgbm90IHRvIG1lbnRpb24gbm8gZmVtYWxlcyBpbiB0aGUgbWFpbiBjYXN0LlxyXG5cclxuU3RpbGwsIGl04oCZcyBpbnRlcmVzdGluZyB0byBvYnNlcnZlIFRhcmFudGlub+KAmXMgZmlyc3Qgc2VyaW91cyBzdGFiIGF0IGZpbG1tYWtpbmcgYW5kIGl0IGhhcyBpdHMgbW9tZW50cyBvZiBnZW51aW5lIGVudGVydGFpbm1lbnQuIEl04oCZcyBhIGxlc3NvbiBvbiBodW1ibGUgYmVnaW5uaW5ncywgd2hpY2ggc2hvd3MgcG90ZW50aWFsIHdoaWxlIG5vdCBiZWluZyB1cCB0byBzbnVmZi5cclxuXHJcblRIRSBGSUxNIFJVTlMgMSBob3VyLCAzOSBtaW51dGVzIGFuZCB3YXMgc2hvdCBpbiBMb3MgQW5nZWxlcyAmIEJ1cmJhbmsuXHJcblxyXG5HUkFERTogQy0iLCJjcmVhdGVkX2F0IjoiMjAxOC0wNi0wNFQxNzoxMjoxMy4wNDFaIiwiaWQiOiI1YjE1NzJlZDBlMGEyNjJkZDYwMGI2MDEiLCJ1cGRhdGVkX2F0IjoiMjAyMS0wNi0yM1QxNTo1ODowOS4yODJaIiwidXJsIjoiaHR0cHM6Ly93d3cudGhlbW92aWVkYi5vcmcvcmV2aWV3LzViMTU3MmVkMGUwYTI2MmRkNjAwYjYwMSJ9LHsiYXV0aG9yIjoiQ2luZW1hU2VyZiIsImF1dGhvcl9kZXRhaWxzIjp7Im5hbWUiOiJDaW5lbWFTZXJmIiwidXNlcm5hbWUiOiJHZXJvbmltbzE5NjciLCJhdmF0YXJfcGF0aCI6Ii8xa2tzM1luVmtweVF4enczNkNPYkZQdmhMNWYuanBnIiwicmF0aW5nIjo2LjB9LCJjb250ZW50IjoiTm9wZSwgSSBkaWRuJ3QgZ2V0IHRoZSBtZW1vLi4uIEFmdGVyIGEgamV3ZWxsZXJ5IGhlaXN0IGdvZXMgd3JvbmcgYW5kIHRoZSBlc2NhcGluZyBmdW5lcmFsLWF0dGlyZWQgaG9vZGx1bXMga2lsbCBhIGNvdXBsZSBvZiBjb3BzIGFuZCBvbmUgZ2V0cyBndXQtc2hvdCBpbiBhIGNhci1qYWNraW5nLCB0aGV5IHJldHVybiB0byB0aGVpciBoaWRlb3V0IHdoZXJlIHRoZXkgdHVybiBvbiBlYWNoIG90aGVyIHdpdGggZXhwbGV0aXZlLXJpZGRlbiB2ZW5vbS4gV2hhdCBub3cgZW5zdWVzIGlzIGEgcmVjcmVhdGlvbiBvZiB0aGUgcGxhbm5pbmcgYW5kIGV4ZWN1dGlvbiBvZiB0aGVpciByYWlkLCB0aGVpciBpbnRyb2R1Y3Rpb25zIHRvIGVhY2ggb3RoZXIgYW5kIHRoYXQgYWxsIGxheXMgdGhlIHNlZWRzIGZvciB0aGlzIG92ZXItcmF0ZWQgZHJhbWEgb2YgYnJ1dGFsIG1pc3RydXN0IGFuZCBkdXBsaWNpdHkuIFRpbSBSb3RoIHByb2JhYmx5IHN0YW5kcyBvdXQgYXMgXCJNci4gT3JhbmdlXCIgYnV0IHRoZSByZXN0IG9mIHRoZSBmYWlybHkgd2VsbCBlc3RhYmxpc2hlZCBjYXN0IG9mZmVyIHVzIGxpdHRsZSBieSB3YXkgb2Ygc29waGlzdGljYXRpb24gb3Igc3VidGxldHkgYXMgdGhleSB0cnkgdG8gZGVjaWRlIHdoaWNoIC0gaWYgYW55IG9mIHRoZW0gLSBpbmZvcm1lZCB0aGUgcG9saWNlLiBJdCdzIHZpb2xlbnQgYnV0IHNvIHdoYXQgLSBpdCdzIG5vdCBTY29yc2VzZSwgbm9yIGRvZXMgdGhlIHN0b3J5IHJlYWxseSBob2xkIHVwIGFmdGVyIGl0IGJlY29tZXMgZ2xhcmluZ2x5IG9idmlvdXMgd2hhdCBpcyBhY3R1YWxseSBnb2luZyB0byBoYXBwZW4gYXQgdGhlIGVuZC4gUXVlbnRpbiBUYXJhbnRpbm8ncyBkaXJlY3RvcmlhbCBkZWJ1dCBoYXMgc2hvY2sgdmFsdWUsIGNlcnRhaW5seSwgYnV0IEknbSBhZnJhaWQgSSBmb3VuZCB0aGUgd2hvbGUgdGhpbmcgcmVhbGx5IHF1aXRlIGR1bGwuIFNvcnJ5IC0gYnV0IHRoZXJlJ3MgbW9yZSB0byBnb29kIHdyaXRpbmcgYW5kIGNoYXJhY3RlcmlzYXRpb24gdGhhdCBsb2FkcyBvZiBlZmZpbmcsIGplZmZpbmcsIGNoYXJtLWZyZWUgdGh1Z2dlcnkgYW5kIGJ1bGxldHMuIE5vdCBmb3IgbWUhIiwiY3JlYXRlZF9hdCI6IjIwMjQtMDEtMDRUMTc6NTA6MjQuNDkwWiIsImlkIjoiNjU5NmVmZTBkN2E3MGExMjhmNjlkMjI2IiwidXBkYXRlZF9hdCI6IjIwMjQtMDEtMDRUMTc6NTA6MjQuNjI0WiIsInVybCI6Imh0dHBzOi8vd3d3LnRoZW1vdmllZGIub3JnL3Jldmlldy82NTk2ZWZlMGQ3YTcwYTEyOGY2OWQyMjYifV0sInRvdGFsX3BhZ2VzIjoxLCJ0b3RhbF9yZXN1bHRzIjozfQ==
+  recorded_at: Fri, 22 Mar 2024 09:30:06 GMT
+recorded_with: VCR 6.2.0
