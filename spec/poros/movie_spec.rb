@@ -36,10 +36,10 @@ RSpec.describe Movie, :vcr do
     end
 
     it "#reviews" do
-        review = @movie_2.reviews.first
+        review = @movie_2.reviews
         
-        expect(@movie_2.reviews).to be_an Array
-        expect(review).to be_a Review
+        expect(review).to be_an Array
+        expect(review.first).to be_a Review
     end
 
     it "#review_count" do

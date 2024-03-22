@@ -30,10 +30,8 @@ RSpec.describe "Movie show page", :vcr do
         end
 
         it 'displays top 10 cast members name and character' do
-            expect(page).to have_css(".cast", count: 10)
-
-            within(".cast") do
-                expect(page).to have_css(".member_name")
+            within(".cast_members") do
+                expect(page).to have_css(".member_name", count: 10)
                 expect(page).to have_css(".character")
             end
         end
