@@ -23,6 +23,7 @@ RSpec.describe MoviesFacade, :vcr do
     
     it '#create_movies' do
         movie_data = [title: "Friends", vote_average: 9.8]
+        
         movie = @facade.create_movies(movie_data).first
         expect(movie).to be_a Movie
         expect(movie.title).to eq("Friends")

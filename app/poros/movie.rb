@@ -3,8 +3,7 @@ class Movie
                 :vote_avg, 
                 :id,
                 :summary,
-                :runtime,
-                :reviews
+                :runtime
 
     def initialize(data)
         @title = data[:title]
@@ -13,7 +12,7 @@ class Movie
         @summary = data[:overview]
         @genres = data[:genres]
         @runtime = data[:runtime]
-        @reviews = MoviesFacade.new.movie_reviews(@id)
+        
     end
 
     def genres
@@ -26,7 +25,11 @@ class Movie
         top_10_cast_members = MoviesFacade.new.movie_cast_members(@id)
     end
 
+    def reviews
+        MoviesFacade.new.movie_reviews(@id)
+    end
+
     def review_count
-        @reviews.count
+        reviews.count
     end
 end
