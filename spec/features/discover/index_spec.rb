@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'User discover page', type: :feature, vcr: true do
     before(:each) do
-        @user = User.create!(name: "Odell", email: "odell@dreams.com")
+        @user = User.create!(name: "Odell", email: "odell@dreams.com", password: "test2")
     end
     it 'displays button to discover top movies and field to search for movie by title' do
         visit user_discover_index_path(@user)

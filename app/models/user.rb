@@ -7,5 +7,4 @@ class User < ApplicationRecord
    has_many :user_parties
    has_many :viewing_parties, through: :user_parties
 
-   #Test validate password confirmation custom validation
 end

@@ -1,4 +1,7 @@
 <h1><%= "#{@user.name}'s Dashboard" %></h1><br>
+<%if session[:location].present?%>
+  <p>Your location: <%=session[:location]%></p>
+<%end%>
 
 <section class="viewing_parties">
   <% @user.viewing_parties.each do |party| %>
@@ -16,3 +19,5 @@
     </div><br>
   <% end %>
 </section>
+
+<%= button_to 'Logout', logout_path, method: :delete%>

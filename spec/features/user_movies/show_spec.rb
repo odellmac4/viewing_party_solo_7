@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "Movie show page", :vcr do
     describe "User story 3" do
         before(:each) do
-            @user = User.create!(name: "Odell", email: "odell@dreams.com")
+            @user = User.create!(name: "Odell", email: "odell@dreams.com", password: "odell")
             @movie = MoviesFacade.new.fetch_movie_by_id(500)
 
             visit user_movie_path(@user, @movie.id)

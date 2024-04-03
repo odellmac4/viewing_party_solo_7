@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Movie results page', :vcr do
     before(:each) do
-        @user = User.create!(name: "Odell", email: "odell@dreams.com")
+        @user = User.create!(name: "Odell", email: "odell@dreams.com", password: "odell2")
 
     end
     it 'displays top rated movies' do
